@@ -135,7 +135,7 @@ alias tmuxkill="tmux kill-session -a"
 # alias hi="echo 'Hello There!'"
 touch2() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 alias notenow="vim ~/notes/$(date +%F_%R).txt"
-alias notes="(cd ~/notes && ls)"
+alias notes="(cd ~/notes && ls -t)"
 alias bye="shutdown now"
 jsonify() {
     cat $1 | jq
