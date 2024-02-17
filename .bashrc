@@ -140,3 +140,4 @@ alias bye="shutdown now"
 jsonify() {
     cat $1 | jq
 }
+alias ubuntudocker="docker run -itd ubuntu:latest"
