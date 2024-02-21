@@ -142,3 +142,4 @@ jsonify() {
 }
 alias ubuntudocker="docker run -itd ubuntu:latest"
 alias ib2f="cd ~/alcovex/ib2-frontend && tmux"
+alias pidofport="sudo netstat -nlp | grep $1"
