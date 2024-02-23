@@ -3,7 +3,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 syntax enable
-colo desert
+" colo desert
 set nobackup
 set smarttab
 set lbr
