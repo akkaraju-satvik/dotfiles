@@ -144,3 +144,10 @@ alias ubuntudocker="docker run -itd ubuntu:latest"
 alias pidofport="sudo netstat -nlp | grep $1"
 alias gp="git push -u origin HEAD"
 alias dcu="docker compose up -d --build"
+codehere() {
+  if [[ $1 ]]; then
+    code -r $1
+  else
+    code -r .
+  fi
+}
