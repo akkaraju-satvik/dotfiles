@@ -11,6 +11,7 @@ set tw=300
 set ai
 set si
 set wrap
+set relativenumber
 
 " toggle NERDTree 
 nnoremap <C-e> :NERDTreeToggle<CR>
