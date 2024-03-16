@@ -141,6 +141,7 @@ jsonify() {
     cat $1 | jq
 }
 alias ubuntudocker="docker run -itd ubuntu:latest"
+alias alpinedocker="docker run -itd alpine:latest"
 alias pidofport="sudo netstat -nlp | grep $1"
 alias gp="git push -u origin HEAD"
 alias dcu="docker compose up -d --build"
