@@ -123,23 +123,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+source <(gh completion -s bash)
 export PATH=$PATH:/usr/local/go/bin
-. "$HOME/.cargo/env"
-alias quit="exit"
 export PATH=$PATH:/home/satvik/go/bin
 complete -C '/usr/local/bin/aws_completer' aws
+alias quit="exit"
 alias gs="git status"
 alias s145="ssh satvik@192.168.1.5"
 alias gc="git commit"
-alias tmuxkill="tmux kill-session -a"
-# alias hi="echo 'Hello There!'"
-touch2() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 alias notenow="vim ~/notes/$(date +%F_%R).txt"
 alias notes="(cd ~/notes && ls -t)"
 alias bye="shutdown now"
-jsonify() {
-    cat $1 | jq
-}
 alias ubuntudocker="docker run -itd ubuntu:latest"
 alias alpinedocker="docker run -itd alpine:latest"
 alias pidofport="sudo netstat -nlp | grep $1"
@@ -148,6 +142,10 @@ alias dcu="docker compose up -d --build"
 alias dcd="docker compose down"
 alias containers="docker ps -a"
 alias images="docker images"
+touch2() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
+jsonify() {
+    cat $1 | jq
+}
 codehere() {
   if [[ $1 ]]; then
     code -r $1
