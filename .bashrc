@@ -142,6 +142,7 @@ alias dcu="docker compose up -d --build"
 alias dcd="docker compose down"
 alias containers="docker ps -a"
 alias images="docker images"
+alias cpp20="g++ -std=c++20"
 touch2() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 jsonify() {
     cat $1 | jq
