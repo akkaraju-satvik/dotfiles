@@ -55,11 +55,14 @@ if [ -n "$force_color_prompt" ]; then
 	color_prompt=
     fi
 fi
-
+CYAN='\033[0;36m'
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  : #null command in bash
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\] \W $(__git_ps1 '"'git:(%s)'"')\[\033[00m\]\$ '
+#    PS1='➜  \[\033[01;36m\]\W\[\033[01;34m\] git:\[\033[01;31m\]$(__git_ps1 '"'(%s)'"')\[\033[01;34m\]\[\033[00m\]\$ '
+    PS1='➜  \[\033[01;36m\]\W\[\033[01;34m\] \[\033[01;31m\]$(__git_ps1 '"'(%s)'"')\[\033[01;34m\]\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h: \w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -143,6 +146,8 @@ alias dcd="docker compose down"
 alias containers="docker ps -a"
 alias images="docker images"
 alias cpp20="g++ -std=c++20"
+alias m="make"
+alias fd="ls /proc/$$/fd"
 touch2() { mkdir -p "$(dirname "$1")" && touch "$1" ; }
 jsonify() {
     cat $1 | jq
@@ -154,3 +159,12 @@ codehere() {
     code -r .
   fi
 }
+clean() {
+  if [[ -f Makefile ]]; then
+    make clean
+  else
+    echo "No Makefile found"
+  fi
+}
+export PATH=$HOME/.local/bin:$PATH
+. "$HOME/.cargo/env"
