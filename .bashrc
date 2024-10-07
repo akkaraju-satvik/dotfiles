@@ -166,5 +166,7 @@ clean() {
     echo "No Makefile found"
   fi
 }
+alias kb-white="legion-kb-rgb set -e Static -c 63,63,63,63,63,63,63,63,63,63,63,63"
+alias kb-red="legion-kb-rgb set -e Static -c 230,0,0,230,0,0,230,0,0,230,0,0"
 export PATH=$HOME/.local/bin:$PATH
 . "$HOME/.cargo/env"
