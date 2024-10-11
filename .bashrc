@@ -168,9 +168,6 @@ clean() {
 }
 alias kb-white="legion-kb-rgb set -e Static -c 63,63,63,63,63,63,63,63,63,63,63,63"
 alias kb-red="legion-kb-rgb set -e Static -c 230,0,0,230,0,0,230,0,0,230,0,0"
-alias cs451="cd ~/illinois-tech/cs451/"
+alias cs451="cd ~/illinois-tech/cs451"
 export PATH=$HOME/.local/bin:$PATH
 . "$HOME/.cargo/env"
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux new-session
-fi
