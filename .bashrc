@@ -172,5 +172,6 @@ pgconnect() {
 alias kb-white="legion-kb-rgb set -e Static -c 63,63,63,63,63,63,63,63,63,63,63,63"
 alias kb-red="legion-kb-rgb set -e Static -c 230,0,0,230,0,0,230,0,0,230,0,0"
 alias cs451="cd ~/illinois-tech/cs451"
+alias tmux="tmux new-session -A -s main"
 export PATH=$HOME/.local/bin:$PATH
 . "$HOME/.cargo/env"
