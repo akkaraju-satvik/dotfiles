@@ -182,3 +182,6 @@ if [ -f '/home/satvik/gcloud/google-cloud-sdk/path.bash.inc' ]; then . '/home/sa
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/satvik/gcloud/google-cloud-sdk/completion.bash.inc' ]; then . '/home/satvik/gcloud/google-cloud-sdk/completion.bash.inc'; fi
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
