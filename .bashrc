@@ -175,6 +175,10 @@ alias cs451="cd ~/illinois-tech/cs451"
 alias tmux="tmux new-session -A -s main"
 alias gpu-stats="watch -n0.1 nvidia-smi"
 export PATH=$HOME/.local/bin:$PATH
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 . "$HOME/.cargo/env"
 
 # The next line updates PATH for the Google Cloud SDK.
